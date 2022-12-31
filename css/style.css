@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 @import url("../../node_modules/swiper/swiper-bundle.min.css");
 
 /*!
@@ -922,6 +924,12 @@
   padding-left: 3rem !important;
 }
 
+html,
+body {
+  /* Убирает прокрутку по горизонтале, для мобильной версии */
+  overflow-x: hidden;
+}
+
 .wrapper {
   overflow-x: hidden;
   position: relative;
@@ -1397,7 +1405,7 @@ table {
 }
 
 .video__title {
-  font-size: 36px;
+  font-size: 18px;
   text-align: center;
   margin-bottom: 90px;
   position: relative;
@@ -1426,8 +1434,7 @@ table {
 
 .video .video-element {
   height: 315px;
-  width: 315px;
-  margin: 0 auto;
+  width: 100%;
 }
 
 .problems {
@@ -1473,7 +1480,7 @@ table {
   position: relative;
   top: 30%;
   transform: translateY(-30%);
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .problem__title {
@@ -1692,6 +1699,11 @@ table {
   margin-top: 50px;
 }
 
+.testimonials-carousel {
+  display: block;
+  margin: 0 auto;
+}
+
 .consultation {
   padding-top: 150px;
   background: linear-gradient(#fff, #dce9f5);
@@ -1870,6 +1882,8 @@ table {
 .consultation__text {
   font-family: "M-Regular";
   font-size: 18px;
+  display: block;
+  margin: 0 auto;
   margin-bottom: 30px;
 }
 
@@ -1947,11 +1961,6 @@ table {
   max-width: 576px;
 }
 
-.pop-up__inner {
-  display: flex;
-  justify-content: space-between;
-}
-
 label {
   display: block;
   font-family: "M-Regular";
@@ -1976,6 +1985,7 @@ input {
 
 .pop-up-close {
   display: inline;
+  float: right;
 }
 
 .pop-up__item {
@@ -4623,6 +4633,10 @@ input {
 
   .footer__button {
     width: 100%;
+  }
+
+  .video__title {
+    font-size: 36px;
   }
 
   .video .video-element {
